@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Grocery List</h2>
+
+
+<table>
+    <thead>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Got It</th>
+    </thead>
+    <tbody>
+        {% for item in item_list %}
+        <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.quantity }}</td>
+        <td></td>
+        </tr>
+    </tbody>
+<table>
+{% endfor %}
+
+{% endblock content%}
