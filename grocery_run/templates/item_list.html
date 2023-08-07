@@ -15,10 +15,11 @@
         <tr>
         <td>{{ item.name }}</td>
         <td>{{ item.quantity }}</td>
-        <td></td>
+        <td><input type="checkbox" | {{ item.bought }}?></td>
         </tr>
+        {% endfor %}
     </tbody>
 <table>
-{% endfor %}
+
 
 {% endblock content%}
