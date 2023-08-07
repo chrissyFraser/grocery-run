@@ -4,11 +4,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.list import ListView
 
 # Create your views here.
-class ItemListView(ListView):
+class ItemListView(LoginRequiredMixin, ListView):
     model = Item
     template_name = "item_list.html"
 
-    # def get_queryset(self):
-    #     return Item.objects.filter(user=self.request.user)
+    def get_queryset(self):
+        return Item.objects.filter(user=self.request.user)
     
     
