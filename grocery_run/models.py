@@ -4,6 +4,7 @@ class Item(models.Model):
     name = models.CharField(max_length=100)
     quantity = models.CharField(max_length=100, null=True, default=1)
     store_name = models.ForeignKey("Store", related_name="store", on_delete=models.PROTECT)
+    bought = models.BooleanField(default=False)
     def __str__(self):
         return self.name
 
