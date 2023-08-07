@@ -29,6 +29,8 @@ ALLOWED_HOSTS = []
 
 LOGIN_REDIRECT_URL = "home"
 # Application definition
+LOGOUT_REDIRECT_URL = "login"
+
 
 INSTALLED_APPS = [
     "gr_accounts.apps.GrAccountsConfig",
