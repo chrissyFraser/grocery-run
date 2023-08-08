@@ -11,7 +11,7 @@
         <th>Got It</th>
     </thead>
     <tbody>
-        {% for item in item_list %}
+        {% for item in object_list %}
         <tr>
         <td>{{ item.name }}</td>
         <td>{{ item.quantity }}</td>
@@ -20,6 +20,13 @@
         {% endfor %}
     </tbody>
 <table>
+
+    <h3>Add Item to List</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>Add</button>
+    </form>
 
 
 {% endblock content%}
