@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-LOGIN_REDIRECT_URL = "grocery_run/home"
+LOGIN_REDIRECT_URL = "home"
 
 LOGOUT_REDIRECT_URL = "login"
 
