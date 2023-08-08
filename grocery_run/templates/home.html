@@ -6,20 +6,23 @@
 
 <table>
     <thead>
+        <th>#</th>
         <th>Item</th>
-        <th>Quantity</th>
         <th>Got It</th>
     </thead>
     <tbody>
-        {% for item in item_list %}
+        {% for item in object_list %}
         <tr>
-        <td>{{ item.name }}</td>
         <td>{{ item.quantity }}</td>
+        <td>{{ item.name }}</td>
         <td><input type="checkbox" | {{ item.bought }}?></td>
         </tr>
         {% endfor %}
     </tbody>
 <table>
 
+        <button type="button">
+            <a href="{% url "create_item" %}">Add Item to List</a>
+        </button>
 
 {% endblock content%}
