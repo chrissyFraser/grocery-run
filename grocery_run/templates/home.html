@@ -14,7 +14,7 @@
         {% for item in object_list %}
         <tr>
         <td>{{ item.quantity }}</td>
-        <td>{{ item.name }}</td>
+        <td><a href="{% url 'update_item' item.id %}">{{ item.name }}</a></td>
         <td><input type="checkbox" | {{ item.bought }}?></td>
         </tr>
         {% endfor %}
