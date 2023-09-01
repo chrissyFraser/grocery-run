@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div>
+        <h1>Edit Item</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Update</button>
+        </form>
+    </div>
+
+    <div>
+        <form method="POST" action="{% url "delete_item" item.id %}">
+            {% csrf_token %}<input type="submit" value="Delete">
+         </form>
+    </div>
+
+
+{% endblock content %}
