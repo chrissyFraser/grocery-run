@@ -11,4 +11,11 @@
         </form>
     </div>
 
+    <div>
+        <form method="POST" action="{% url "delete_item" item.id %}">
+            {% csrf_token %}<input type="submit" value="Delete">
+         </form>
+    </div>
+
+
 {% endblock content %}
