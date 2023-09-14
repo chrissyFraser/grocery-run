@@ -7,14 +7,15 @@
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Update</button>
+            <br>
+            <button class="button-33" role="button" type="submit">update</button>
         </form>
     </div>
-
+    <br>
     <div>
         <form method="POST" action="{% url "delete_item" item.id %}">
-            {% csrf_token %}<input type="submit" value="Delete">
-         </form>
+            {% csrf_token %}<button class="button-33" role="button" type="submit" value="Delete">delete</button>
+        </form>
     </div>
 
 

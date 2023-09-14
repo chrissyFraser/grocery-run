@@ -4,25 +4,27 @@
 <h2>Grocery List</h2>
 
 
-<table>
+<table table-layout="auto">
     <thead>
-        <th>#</th>
-        <th>Item</th>
-        <th>Got It</th>
+        <tr>
+            <th>#</th>
+            <th>Item</th>
+            <th>Got It</th>
+        </tr>
     </thead>
     <tbody>
         {% for item in object_list %}
         <tr>
-        <td>{{ item.quantity }}</td>
-        <td><a href="{% url 'update_item' item.id %}">{{ item.name }}</a></td>
-        <td><input type="checkbox" | {{ item.bought }}?></td>
+            <td>{{ item.quantity }}</td>
+            <td><a href="{% url 'update_item' item.id %}">{{ item.name|lower }}</a></td>
+            <td><input type="checkbox" | {{ item.bought }}?></td>
         </tr>
         {% endfor %}
     </tbody>
-<table>
+</table>
 
-        <button type="button">
-            <a href="{% url "create_item" %}">Add Item to List</a>
+        <button class="button-33" type="button">
+            <a href="{% url "create_item" %}">add item</a>
         </button>
 
 {% endblock content%}
