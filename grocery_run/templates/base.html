@@ -10,12 +10,19 @@
         <link rel="stylesheet" href="{% static 'css/app.css' %}">
         <link rel="icon" type="image/x-icon" href="{% static "img/favicon.ico" %}">
     </head>
-    <header>
-        <h1>Grocery Run</h1>
-        <nav></nav>
-    </header>
-    <body>
-        {% block content %}
-        {% endblock content %}
-    </body>
+    <div id="page-container">
+        <header>
+            <h1>Grocery Run</h1>
+            <nav></nav>
+        </header>
+        <body>
+            <div  class="container" id="content-wrap">
+            {% block content %}
+            {% endblock content %}
+            </div>
+        </body>
+        <footer>
+            <p>Chrissy Fraser 2023 | <a href="https://www.freepik.com/free-vector/healthy-vegetables-background_848742.htm#query=vegetable%20drawing%20cute%20background&position=5&from_view=search&track=ais">Background Image by terdpongvector</a> on Freepik<p>
+        </footer>
+    </div>
 </html>
