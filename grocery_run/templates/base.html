@@ -12,8 +12,13 @@
     </head>
     <div id="page-container">
         <header>
-            <h1>Grocery Run</h1>
-            <nav></nav>
+            <nav>
+                <a class="button-33" id="nav-button" href="{% url "home" %}">home</a>
+                <a class="button-33" id="nav-button" href="{% url "logout" %}">logout</a>
+            </nav>
+            <div >
+                <img id="logo" src="{% static "img/gr-y.png" %}"/>
+            </div>
         </header>
         <body>
             <div  class="container" id="content-wrap">

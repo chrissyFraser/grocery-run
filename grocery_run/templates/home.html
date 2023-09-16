@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Grocery List</h2>
+<h2>List</h2>
 
 
 <table table-layout="auto">
@@ -17,7 +17,7 @@
         <tr>
             <td>{{ item.quantity }}</td>
             <td><a href="{% url 'update_item' item.id %}">{{ item.name|lower }}</a></td>
-            <td><input type="checkbox" | {{ item.bought }}?></td>
+            <td><input id="checkbox" type="checkbox" | {{ item.bought }}?></td>
         </tr>
         {% endfor %}
     </tbody>
