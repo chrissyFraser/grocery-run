@@ -6,7 +6,7 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
 class ItemListView(LoginRequiredMixin, ListView):
     model = Item
-    template_name = "index.html"
+    template_name = "home.html"
 
     def get_queryset(self):
         return Item.objects.filter(user=self.request.user)
